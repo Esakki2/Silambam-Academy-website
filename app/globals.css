@@ -92,15 +92,6 @@ body {
   padding-top: 1.2rem;
 }
 
-.grade-track {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 86px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.22);
-}
-
 .grade-grid {
   position: relative;
   z-index: 1;

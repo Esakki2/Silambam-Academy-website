@@ -51,7 +51,21 @@ Without Supabase credentials the site still runs using high-quality mock content
 4. Storage → create public buckets: academy-images, instructor-images, weapon-images, gallery, event-images, achievement-images
 5. Create first admin user:
    - Auth → Users → Add user
-   - SQL: `update profiles set role = 'admin' where email = 'your@email.com';`
+   - SQL:
+```sql
+UPDATE public.profiles
+SET role = 'admin'
+WHERE email = 'desakki123@email.com';
+```
+   If the profile row does not exist yet, create it first:
+```sql
+INSERT INTO public.profiles (id, email, role)
+SELECT id, email, 'admin'
+FROM auth.users
+WHERE email = 'desakki123@email.com'
+ON CONFLICT (id) DO UPDATE
+SET role = 'admin';
+```
 6. Insert academy_settings row (see seed in migrations or README).
 
 ## Project Structure

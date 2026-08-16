@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Cinzel } from "next/font/google";
-import "./globals.css";
+// import "./globals.css";
 import { Navbar } from "@/components/public/Navbar";
 import { Footer } from "@/components/public/Footer";
 import { WhatsAppButton } from "@/components/public/WhatsAppButton";
@@ -57,8 +57,11 @@ export default async function RootLayout({
   const settings = await getSettings();
 
   return (
-    <html lang="en" className={`${inter.variable} ${cinzel.variable}`}>
-      <body className="min-h-screen flex flex-col bg-background text-foreground antialiased">
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${cinzel.variable}`}>
+      <body
+        suppressHydrationWarning
+        className="min-h-screen flex flex-col bg-background text-foreground antialiased"
+      >
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer settings={settings} />

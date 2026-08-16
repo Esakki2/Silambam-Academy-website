@@ -17,7 +17,7 @@ const NAV_LINKS = [
   { href: "/#achievements", label: "Achievements" },
   { href: "/#gallery", label: "Gallery" },
   { href: "/#training", label: "Training" },
-  { href: "/join", label: "Join Us" },
+  { href: "/join", label: "Join" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -89,25 +89,25 @@ export function Navbar() {
           : "bg-transparent"
       )}
     >
-      <nav className="container-wide flex items-center h-16 md:h-20 px-4 sm:px-6 lg:px-8">
-        <div className="flex w-full items-center justify-between gap-4">
+<nav className="container-wide flex h-16 items-center px-4 sm:px-6 lg:px-8 md:h-20">
+        <div className="flex w-full items-center justify-between gap-3">
           <Link
             href="/"
-            className="shrink-0 font-display text-lg md:text-xl tracking-wider text-gold hover:text-gold-light transition-colors"
+            className="shrink-0 font-display text-base tracking-[0.12em] text-gold transition-colors hover:text-gold-light sm:text-lg md:text-xl"
           >
             TEAM J ACADEMY
           </Link>
 
           {/* Desktop */}
           <div className="hidden xl:flex flex-1 justify-center">
-            <ul className="flex items-center justify-center gap-1">
+            <ul className="flex items-center justify-center gap-1.5 whitespace-nowrap">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
                     onClick={(event) => handleSectionNavigation(event, link.href)}
                     className={cn(
-                      "inline-flex items-center px-3 py-2 text-sm uppercase tracking-wide transition-colors",
+                      "inline-flex items-center justify-center px-2.5 py-2 text-[10px] font-medium uppercase tracking-[0.16em] transition-colors sm:text-[11px]",
                       pathname === "/" && link.href.includes("#")
                         ? "text-gold"
                         : pathname === link.href
@@ -122,9 +122,11 @@ export function Navbar() {
             </ul>
           </div>
 
-          <div className="hidden md:flex items-center justify-end gap-3 shrink-0">
+          <div className="hidden md:flex shrink-0 items-center justify-end">
             <Link href="/join">
-              <Button size="sm">Book a Trial Class</Button>
+              <Button className="rounded-md px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.08em] sm:px-5">
+                Book a Trial Class
+              </Button>
             </Link>
           </div>
         </div>
@@ -132,7 +134,7 @@ export function Navbar() {
         {/* Mobile toggle */}
         <button
           type="button"
-          className="xl:hidden p-2 text-off-white hover:text-gold"
+          className="p-2 text-off-white hover:text-gold xl:hidden"
           onClick={() => setOpen(true)}
           aria-label="Open menu"
           aria-expanded={open}

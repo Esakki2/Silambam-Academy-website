@@ -174,7 +174,6 @@ export default async function HomePage() {
             subtitle="Team J Silambam Academy grading pathway"
           />
           <div className="grade-timeline">
-            <div className="grade-track" />
             <div className="grade-grid">
               {grades.map((g, i) => {
                 const stripeCount = i >= 7 ? i - 6 : 0;

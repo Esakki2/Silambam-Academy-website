@@ -44,8 +44,18 @@ export async function updateSession(request: NextRequest) {
       return NextResponse.redirect(url);
     }
 
-    // Optional: check role from profiles table
-    // For now we rely on RLS + authenticated session
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("role")
+      .eq("id", user.id)
+      .maybeSingle();
+
+    if (!profile || profile.role !== "admin") {
+      const url = request.nextUrl.clone();
+      url.pathname = "/admin/login";
+      url.searchParams.set("error", "Admin access required");
+      return NextResponse.redirect(url);
+    }
   }
 
   return supabaseResponse;
