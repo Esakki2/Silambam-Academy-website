@@ -112,13 +112,16 @@ export const mockBenefits: Benefit[] = [
 ];
 
 export const mockGrades: Grade[] = [
-  { id: "1", name: "Beginner", description: "Foundation of stance, basic footwork and staff handling.", level: 1, color: "#6b7280", image_url: null, requirements: "No prior experience required", sort_order: 1, is_published: true, created_at: "" },
-  { id: "2", name: "Grade 1", description: "Introduction to core techniques and combinations.", level: 2, color: "#3b82f6", image_url: null, requirements: "Completed Beginner", sort_order: 2, is_published: true, created_at: "" },
-  { id: "3", name: "Grade 2", description: "Intermediate staff patterns and partner drills.", level: 3, color: "#10b981", image_url: null, requirements: "Grade 1 proficiency", sort_order: 3, is_published: true, created_at: "" },
-  { id: "4", name: "Grade 3", description: "Advanced combinations and speed work.", level: 4, color: "#f59e0b", image_url: null, requirements: "Grade 2 proficiency", sort_order: 4, is_published: true, created_at: "" },
-  { id: "5", name: "Intermediate", description: "Weapon transitions and application.", level: 5, color: "#ef4444", image_url: null, requirements: "Grade 3 proficiency", sort_order: 5, is_published: true, created_at: "" },
-  { id: "6", name: "Advanced", description: "Complex sequences and teaching assistance.", level: 6, color: "#8b5cf6", image_url: null, requirements: "Intermediate level", sort_order: 6, is_published: true, created_at: "" },
-  { id: "7", name: "Instructor / Mastery", description: "Full technical and pedagogical competence.", level: 7, color: "#c9a227", image_url: null, requirements: "Advanced level + assessment", sort_order: 7, is_published: true, created_at: "" },
+  { id: "1", name: "White", description: "Foundation stance & basic footwork", level: 1, color: "#f5f5f5", image_url: null, requirements: "Introductory", sort_order: 1, is_published: true, created_at: "" },
+  { id: "2", name: "Yellow", description: "Introduction to core techniques", level: 2, color: "#f5c400", image_url: null, requirements: "Core movement", sort_order: 2, is_published: true, created_at: "" },
+  { id: "3", name: "Orange", description: "Building strikes & stick control", level: 3, color: "#f28c00", image_url: null, requirements: "Stick control", sort_order: 3, is_published: true, created_at: "" },
+  { id: "4", name: "Green", description: "Intermediate patterns & partner drills", level: 4, color: "#2ecc40", image_url: null, requirements: "Pattern drill", sort_order: 4, is_published: true, created_at: "" },
+  { id: "5", name: "Blue", description: "Advanced combinations & speed work", level: 5, color: "#2e6be6", image_url: null, requirements: "Speed & form", sort_order: 5, is_published: true, created_at: "" },
+  { id: "6", name: "Purple", description: "Weapon transitions & application", level: 6, color: "#8e44ad", image_url: null, requirements: "Weapon flow", sort_order: 6, is_published: true, created_at: "" },
+  { id: "7", name: "Brown", description: "Complex sequences & sparring", level: 7, color: "#8b5e3c", image_url: null, requirements: "Advanced sparring", sort_order: 7, is_published: true, created_at: "" },
+  { id: "8", name: "Brown 1", description: "Refined technique & teaching assistance", level: 8, color: "#7a4b23", image_url: null, requirements: "Refinement", sort_order: 8, is_published: true, created_at: "" },
+  { id: "9", name: "Brown 2", description: "Full technical & pedagogical grounding", level: 9, color: "#6b3d1d", image_url: null, requirements: "Pedagogy", sort_order: 9, is_published: true, created_at: "" },
+  { id: "10", name: "Brown 3", description: "Instructor / mastery level readiness", level: 10, color: "#4d2e18", image_url: null, requirements: "Mastery", sort_order: 10, is_published: true, created_at: "" },
 ];
 
 export const mockWeapons: Weapon[] = [
