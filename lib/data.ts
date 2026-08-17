@@ -227,3 +227,4 @@ export async function getGallery(): Promise<GalleryItem[]> {
     return mockGallery;
   }
 }
+
