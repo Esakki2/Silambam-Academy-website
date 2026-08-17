@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Cinzel } from "next/font/google";
-// import "./globals.css";
+import "./globals.css";
 import { Navbar } from "@/components/public/Navbar";
 import { Footer } from "@/components/public/Footer";
 import { WhatsAppButton } from "@/components/public/WhatsAppButton";
